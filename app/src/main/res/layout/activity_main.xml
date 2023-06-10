@@ -75,3 +75,83 @@
             android:textColor="#000000"
             android:textSize="20sp"
             android:text="7" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#808080"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#808080"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#FF8000"
+            android:textSize="20sp"
+            android:text="*" />
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#808080"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#808080"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="30dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#808080"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#FF8000"
+            android:textSize="20sp"
+            android:text="-" />
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#808080"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="1" />

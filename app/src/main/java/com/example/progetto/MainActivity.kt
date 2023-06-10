@@ -36,4 +36,25 @@ class MainActivity : AppCompatActivity() {
         val number = (it as Button).text.toString()
         resultTextView.append(number)
     }
+    val numberClickListener = View.OnClickListener {
+        val number = (it as Button).text.toString()
+        resultTextView.append(number)
+    }
+
+    button0.setOnClickListener(numberClickListener)
+    button1.setOnClickListener(numberClickListener)
+    button2.setOnClickListener(numberClickListener)
+    button3.setOnClickListener(numberClickListener)
+    button4.setOnClickListener(numberClickListener)
+    button5.setOnClickListener(numberClickListener)
+    button6.setOnClickListener(numberClickListener)
+    button7.setOnClickListener(numberClickListener)
+    button8.setOnClickListener(numberClickListener)
+    button9.setOnClickListener(numberClickListener)
+
+    buttonDot.setOnClickListener {
+        if (!resultTextView.text.contains(".")) {
+            resultTextView.append(".")
+        }
+    }
 }
