@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
+import net.objecthunter.exp4j.ExpressionBuilder
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var resultTextView: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
+
     resultTextView = findViewById(R.id.resultTextView)
 
     val button0 = findViewById<Button>(R.id.button0)
@@ -36,10 +39,7 @@ class MainActivity : AppCompatActivity() {
         val number = (it as Button).text.toString()
         resultTextView.append(number)
     }
-    val numberClickListener = View.OnClickListener {
-        val number = (it as Button).text.toString()
-        resultTextView.append(number)
-    }
+
 
     button0.setOnClickListener(numberClickListener)
     button1.setOnClickListener(numberClickListener)
@@ -57,4 +57,44 @@ class MainActivity : AppCompatActivity() {
             resultTextView.append(".")
         }
     }
+    buttonPlus.setOnClickListener {
+        resultTextView.append("+")
+    }
+    buttonMinus.setOnClickListener {
+        resultTextView.append("-")
+    }
+    buttonMultiply.setOnClickListener {
+        resultTextView.append("*")
+    }
+    buttonDivide.setOnClickListener {
+        resultTextView.append("/")
+    }
+    buttonOpenParenthesis.setOnClickListener {
+        resultTextView.append("(")
+    }
+    buttonCloseParenthesis.setOnClickListener {
+        resultTextView.append(")")
+    }
+
+    buttonClear.setOnClickListener {
+        resultTextView.text = ""
+    }
+
+    buttonEquals.setOnClickListener {
+        val expression = resultTextView.text.toString()
+        try {
+            val result = evaluateExpression(expression)
+            resultTextView.text = result.toString()
+        } catch (e: IllegalArgumentException) {
+            resultTextView.text = "Error"
+        }
+    }
 }
+
+private fun evaluateExpression(expression: String): Double {
+    val sanitizedExpression = expression.replace(" ", "")
+    val exp = ExpressionBuilder(sanitizedExpression).build()
+    return exp.evaluate()
+}
+}
+
