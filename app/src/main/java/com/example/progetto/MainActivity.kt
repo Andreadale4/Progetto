@@ -53,9 +53,7 @@ class MainActivity : AppCompatActivity() {
     button9.setOnClickListener(numberClickListener)
 
     buttonDot.setOnClickListener {
-        if (!resultTextView.text.contains(".")) {
             resultTextView.append(".")
-        }
     }
     buttonPlus.setOnClickListener {
         resultTextView.append("+")
